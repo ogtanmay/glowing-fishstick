@@ -14,12 +14,12 @@ const reasons = [
 document.addEventListener("DOMContentLoaded", () => {
   const reasonEl = document.getElementById("reason");
   const nextReasonBtn = document.getElementById("next-reason");
-  let index = 0;
+  let reasonIndex = 0;
 
-  reasonEl.textContent = reasons[index];
+  reasonEl.textContent = reasons[reasonIndex];
 
   nextReasonBtn.addEventListener("click", () => {
-    index = (index + 1) % reasons.length;
-    reasonEl.textContent = reasons[index];
+    reasonIndex = (reasonIndex + 1) % reasons.length;
+    reasonEl.textContent = reasons[reasonIndex];
   });
 });
