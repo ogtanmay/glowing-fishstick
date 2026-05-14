@@ -14,9 +14,8 @@ const reasons = [
 document.addEventListener("DOMContentLoaded", () => {
   const reasonEl = document.getElementById("reason");
   const nextReasonBtn = document.getElementById("next-reason");
-  let reasonIndex = 0;
-
-  reasonEl.textContent = reasons[reasonIndex];
+  const initialReason = reasonEl.textContent.trim();
+  let reasonIndex = Math.max(reasons.indexOf(initialReason), 0);
 
   nextReasonBtn.addEventListener("click", () => {
     reasonIndex = (reasonIndex + 1) % reasons.length;
