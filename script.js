@@ -11,11 +11,15 @@ const reasons = [
   "You deserve the chance to feel peace again."
 ];
 
-const reasonEl = document.getElementById("reason");
-const nextReasonBtn = document.getElementById("next-reason");
-let index = 0;
+document.addEventListener("DOMContentLoaded", () => {
+  const reasonEl = document.getElementById("reason");
+  const nextReasonBtn = document.getElementById("next-reason");
+  let index = 0;
 
-nextReasonBtn.addEventListener("click", () => {
-  index = (index + 1) % reasons.length;
   reasonEl.textContent = reasons[index];
+
+  nextReasonBtn.addEventListener("click", () => {
+    index = (index + 1) % reasons.length;
+    reasonEl.textContent = reasons[index];
+  });
 });
