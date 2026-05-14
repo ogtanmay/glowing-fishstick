@@ -63,3 +63,8 @@ button:hover {
   font-size: 0.95rem;
   opacity: 0.85;
 }
+
+.support a {
+  color: #bae6fd;
+  font-weight: 700;
+}
